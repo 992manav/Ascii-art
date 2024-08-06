@@ -25,8 +25,8 @@ const ImageUploader = () => {
 
     img.onload = () => {
       const canvas = document.createElement('canvas');
-      canvas.width = 64; // Reduced width
-      canvas.height = 32; // Reduced height
+      canvas.width = 64; 
+      canvas.height = 32; 
       const ctx = canvas.getContext('2d');
       ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
@@ -38,7 +38,7 @@ const ImageUploader = () => {
 
   const convertToAscii = (imageData) => {
     const { data, width, height } = imageData;
-    const asciiCharacters = ' .:-=*+&#%@'; // Optional: Customize this list
+    const asciiCharacters = ' .:-=*+&#%@'; 
     let ascii = '';
 
     for (let y = 0; y < height; y++) {
@@ -77,7 +77,7 @@ const ImageUploader = () => {
         {image ? (
           <>
             {/* <img src={image} width={350} height={200} alt={fileName} /> */}
-            <pre style={{ fontSize: '0.4rem' }}>{asciiArt}</pre> {/* Adjust font size for smaller ASCII art */}
+            <pre style={{ fontSize: '0.4rem' }}>{asciiArt}</pre> 
            
           </>
         ) : (
